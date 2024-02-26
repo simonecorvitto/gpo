@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Elegance</title>
+    <style>
+        .button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+        h1 {
+    color: #fff; /* Testo bianco */
+    background-color: #000000; /* Sfondo nero */
+    padding: 20px; /* Spaziatura interna */
+    border: 2px solid #ffffff; /* Bordo nero di 2 pixel */
+    border-radius: 10px; /* Bordi arrotondati */
+    text-align: center; /* Allineamento al centro */
+    text-transform: uppercase; /* Testo in maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    font-size: 30px; /* Dimensione del testo */
+    font-family: 'Arial', sans-serif; /* Tipo di carattere */
+    font-weight: bold; /* Grassetto */
+    margin: 0; /* Elimina il margine predefinito */
+}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, footer {
+            background-image:url("sfondohome.jpg");
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 250px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        a{
+            text-transform: uppercase; /* Testo in maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    font-size: 24px; /* Dimensione del testo */
+    font-family: 'Arial', sans-serif; /* Tipo di carattere */
+    font-weight: bold; /* Grassetto */
+        }
+        .info-button {
+            position: relative;
+        }
+
+        .info-tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Posiziona il tooltip sopra il bottone */
+            left: 50%;
+            margin-left: -100px; /* Centra il tooltip rispetto al bottone */
+            transition: visibility 0.3s ease;
+        }
+
+        .info-button:hover .info-tooltip {
+            visibility: visible;
+        }
+
+        /* Stile del bottone "Posizione" */
+        .location-button {
+            appearance: none;
+            background-color: #000000;
+            border: 2px solid #1A1A1A;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 60px;
+            min-width: 0;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: auto; /* Larghezza automatica per adattarsi al contenuto */
+            will-change: transform;
+            margin-left: 10px; /* Margine sinistro per separare dal nome */
+        }
+
+        .location-button:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
+
+        .location-button:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        /* Stile del bottone "Google Maps" nel menu di navigazione */
+        .maps-button {
+            appearance: none;
+            background-color: #4285F4; /* Colore Google Maps */
+            border: 2px solid #4285F4;
+            border-radius: 15px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 60px;
+            min-width: 0;
+            outline: none;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            will-change: transform;
+        }
+
+        .maps-button:hover {
+            background-color: #3c78d8; /* Cambia colore al passaggio del mouse */
+            border-color: #3c78d8;
+        }
+
+        .maps-button:active {
+            box-shadow: none;
+            transform: translateY(0);
+        }
+
+        nav {
+            background-color: #000000;
+            overflow: hidden;
+            text-align: right; /* Allinea i link a destra */
+        }
+
+        nav a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-left: 10px; /* Aggiungi margine tra i link */
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Retro Elegance </h1>
+
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    
+    <a href="pagina2.html">Accessori</a>
+   
+</nav>
+
+<section>
+    <div class="card">
+        <img src="uomo1.jpg" alt="Gilet in jeans">
+        <h2>Vintage Gilet jeans</h2>
+        <p>Gilet in jeans 80s.</p>
+        <p>Prezzo: $35</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+
+    <div class="card">
+        <img src="donna1.jpg" alt="Abito Vintage rosso">
+        <h2>Abito rosso Vintage </h2>
+        <p>Abito perfetto per festa in cotone .</p>
+        <p>Prezzo: $40</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+    <div class="card">
+        <img src="uomo2.jpg" alt="Giubbotto smanicato">
+        <h2>Giubbotto smanicato vintage </h2>
+        <p>Giubbotto vintage (90s) .</p>
+        <p>Prezzo: $60</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+
+    <div class="card">
+        <img src="donna2.jpg" alt="Abito Vintage nero e giallo">
+        <h2>Abito Da festa </h2>
+        <p>Abito perfetto per festa in cotone .</p>
+        <p>Prezzo: $50</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+    <div class="card">
+        <img src="uomo3.jpg" alt="Felpa vintage">
+        <h2>Felpa nera vintage </h2>
+        <p>Felpa nera 90s.</p>
+        <p>Prezzo: $40</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+    <div class="card">
+        <img src="donna3.jpg" alt="Abito Vintage blu">
+        <h2>Abito blu Vintage </h2>
+        <p>Abito perfetto se cerchi eleganza .</p>
+        <p>Prezzo: $80</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+    <div class="card">
+        <img src="uomo4.jpg" alt="Giacca Elegante">
+        <h2>Giacca Elegante vintage </h2>
+        <p>Abito perfetto per festa in cotone .</p>
+        <p>Prezzo: $60</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+    <div class="card">
+        <img src="donna4.jpg" alt="Abito Vintage ">
+        <h2>Abito casual </h2>
+        <p>Abito adatto alle feste .</p>
+        <p>Prezzo: $50</p>
+        <button class="button-27" role="button">Aggiungi al Carrello</button>
+    </div>
+
+
+   
+
+</section>
+
+<footer>
+    
+    
+
+    <!-- Bottone "Info" con informazioni di spedizioni e resi/garanzie -->
+     <!-- Bottone "Info" con informazioni di spedizioni e resi/garanzie -->
+     <button class="button-27 info-button" role="button">
+        Info
+        <span class="info-tooltip">
+            <strong>Politica di Spedizione:</strong><br>
+            Spedizioni gratuite per ordini superiori a $50. Altrimenti, tariffa standard di $5.<br><br>
+            
+            <strong>Politica di Reso:</strong><br>
+            Hai 30 giorni di tempo dalla data di acquisto per restituire un articolo.
+            Consulta la nostra pagina dei Termini e Condizioni per ulteriori dettagli.
+        </span>
+        <div>
+            <h3>Contatti</h3>
+            <p>Telefono: +123 456 7890</p>
+            <p>Email: info@retroelegance.com</p>
+            <a class="button-27 location-button" href="https://www.google.com/maps/place/Via+delle+Terme,+13" role="button">Dove ci Troviamo?</a>
+        </div>
+
+    </button>
+</footer>
+
+</body>
+</html>
